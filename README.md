@@ -1,143 +1,169 @@
-Nội dung môn học
-1. Tìm kiếm trong không gian trạng thái
+# 📘 Introduction to Artificial Intelligence – Course Projects
 
-Sinh viên được tiếp cận các khái niệm nền tảng:
+This repository contains all assignments, implementations, and final project materials from the course **503043 – Introduction to Artificial Intelligence** at **Ton Duc Thang University**.  
+The projects cover classical AI search, optimization, logic, and machine learning fundamentals.
 
-🔹 8-Puzzle
+---
 
-Mô hình hóa trạng thái, hành động và mô hình chuyển tiếp
+## 📌 Table of Contents
+- [Overview](#overview)  
+- [1. Search Algorithms – 8-Puzzle](#1-search-algorithms--8-puzzle)  
+- [2. Search & Heuristics – Pacman](#2-search--heuristics--pacman)  
+- [3. Local Search Algorithms](#3-local-search-algorithms)  
+- [4. N-Queens with CNFs & SAT Solver](#4-n-queens-with-cnfs--sat-solver)  
+- [5. Game AI – 8x8 Tic-Tac-Toe with Alpha-Beta Pruning](#5-game-ai--8x8-tic-tac-toe-with-alpha-beta-pruning)  
+- [6. Machine Learning – Decision Tree](#6-machine-learning--decision-tree)  
+- [Technologies Used](#technologies-used)  
+- [Team Members](#team-members)  
 
-Thuật toán được cài đặt:
+---
 
-Breadth-First Search (BFS)
+# 🧠 Overview
+This course provides foundational concepts in Artificial Intelligence, including:
 
-A* Search (Manhattan, Euclidean heuristic)
+- State-space search  
+- Heuristic evaluation  
+- Uninformed & informed search algorithms  
+- Adversarial search (Minimax & Alpha-Beta)  
+- Local optimization algorithms  
+- Logical reasoning & CNF  
+- SAT solving  
+- Machine learning with Decision Trees  
 
-Phân tích: admissibility, consistency của heuristic
+The repository includes full implementations, pseudocode, and result visualizations.
 
-Thử nghiệm 1000 trạng thái ngẫu nhiên và so sánh hiệu suất thuật toán
+---
 
-🔹 Pacman Search
+# 1. 🔍 Search Algorithms – 8-Puzzle
+We model the classic 8-puzzle with:
 
-Mô hình hoá bản đồ, vị trí Pacman, thức ăn và vật cản
+### ✔ State Representation
+- Position of tiles (1–8 + blank)
+- Initial & goal states
+- Actions: Up, Down, Left, Right
 
-Thuật toán sử dụng:
+### ✔ Algorithms Implemented
+- **Breadth-First Search (BFS)**
+- **A\* Search** with:
+  - Manhattan heuristic  
+  - Euclidean heuristic  
 
-Uniform-Cost Search (UCS)
+### ✔ Features
+- Validity checking  
+- Path reconstruction  
+- Random generation of 1000 initial states  
+- Comparison of BFS vs A\* performance  
 
-A* Search (Manhattan, Euclidean)
+---
+
+# 2. 🟡 Search & Heuristics – Pacman
 
-Mục tiêu: ăn tất cả thức ăn và đi qua 4 góc
+We model Pacman's environment including:
 
-Triển khai bộ sinh kế thừa trạng thái, kiểm tra mục tiêu, tính chi phí
+- Obstacles  
+- Pacman's position  
+- Food pellets  
+- Valid actions  
+
+### ✔ Algorithms Implemented
+- **Uniform-Cost Search (UCS)**
+- **A\* Search (Manhattan & Euclidean)**
+
+### ✔ Goal
+- Eat all food items  
+- Visit all four corners  
+- Minimize total cost  
+
+---
+
+# 3. 🔺 Local Search Algorithms
+
+We explored three classical local optimization strategies on a 2D evaluation landscape:
+
+### ✔ Algorithms
+- **Random Restart Hill-Climbing**
+- **Simulated Annealing**
+- **Local Beam Search**
+
+### ✔ Features
+- Stateful search  
+- Escape from local maxima  
+- Temperature schedule for simulated annealing  
+- Path visualization on 3D surface  
+
+---
+
+# 4. ♛ N-Queens with CNFs & SAT Solver
+
+We solve the N-Queens problem using propositional logic:
+
+### ✔ Steps
+1. Map each board cell → a propositional variable  
+2. Encode constraints:
+   - One queen per row  
+   - One queen per column  
+   - No queens on same diagonal  
+3. Convert constraints to **Conjunctive Normal Form (CNF)**  
+4. Solve using **Glucose3 SAT Solver**  
+5. Visualize the solved N×N board  
+
+---
+
+# 5. 🎮 Game AI – 8x8 Tic-Tac-Toe with Alpha-Beta Pruning
+
+A competitive game implementation where the AI plays against a human.
+
+### ✔ Game Rules
+- 8×8 board  
+- Win if 4 consecutive marks (row/column/diagonal)
+
+### ✔ AI Method
+- **Minimax Search**
+- **Alpha-Beta Pruning**
+- Custom evaluation function:
+  - Offensive streak scoring  
+  - Defensive blocking heuristics  
+  - Positional (zone-based) weighting  
+
+---
+
+# 6. 🌳 Machine Learning – Decision Tree
+
+Using dataset *dt_data.csv* containing Rank + 9 scoring attributes:
+
+### ✔ Part 1: Information Theory Metrics
+We compute:
+- **Entropy**
+- **Average Entropy**
+- **Information Gain**
+
+### ✔ Part 2: Decision Tree Classifier
+Using Scikit-learn:
+- Train/test split  
+- Model training (depth=7)  
+- Accuracy reports  
+- Confusion matrix  
+- Feature importance chart  
+- Decision Tree visualization  
+
+---
+
+# 🛠 Technologies Used
+- **Python**  
+- **NumPy**, **Pandas**  
+- **Matplotlib**  
+- **Scikit-learn**  
+- **Glucose3 (SAT Solver)**  
+- **Custom AI algorithms**
+
+---
+
+# 👥 Team Members
+| Name | Student ID | Email |
+|------|-----------|--------|
+| **Lý Tuấn An** | 52000620 | 52000620@student.tdtu.edu.vn |
+| **Lý Tiểu Long** | 52200168 | 52200168@student.tdtu.edu.vn |
+| **Giản Hoàng Huy** | 52200147 | 52200147@student.tdtu.edu.vn |
+| **Huỳnh Hoài Nam** | 52200151 | 52200151@student.tdtu.edu.vn |
+| **Lê Hồng Quang** | 52200156 | 52200156@student.tdtu.edu.vn |
 
-2. Local Search Algorithms
-
-Bài trình bày tập trung vào ba thuật toán tìm kiếm cục bộ:
-
-🔹 Random Restart Hill-Climbing
-
-Tránh kẹt ở cực trị địa phương
-
-Chạy nhiều lần và chọn lời giải tốt nhất
-
-🔹 Simulated Annealing
-
-Cho phép “nhảy” ra khỏi local optimum nhờ xác suất Boltzmann
-
-Biến thiên nhiệt độ theo schedule
-
-🔹 Local Beam Search
-
-Duy trì k trạng thái tốt nhất mỗi vòng
-
-Tập trung khai thác các ứng viên tiềm năng
-
-Các thuật toán được áp dụng để tìm điểm cực đại trên ảnh được ánh xạ thành evaluation surface.
-
-3. Logic và Ràng buộc – N-Queens với CNFs
-
-Nhóm triển khai bài toán đặt N quân hậu thông qua:
-
-Biến hóa từng ô thành biến logic
-
-Thiết lập ràng buộc:
-
-1 hậu mỗi hàng
-
-1 hậu mỗi cột
-
-Không trùng đường chéo chính/phụ
-
-Chuyển đổi công thức sang Conjunctive Normal Form (CNF)
-
-Giải bằng Glucose3 SAT Solver
-
-In lại bàn cờ lời giải dưới dạng ma trận
-
-4. Minimax & Alpha-Beta – 8x8 Tic-Tac-Toe
-
-Xây dựng trò chơi Tic-Tac-Toe mở rộng:
-
-Bảng 8×8, thắng khi liên tiếp 4 quân
-
-Người chơi đấu với máy
-
-Máy sử dụng:
-
-Minimax + Alpha-Beta Pruning
-
-Hàm đánh giá (Evaluate):
-
-Chiến lược tấn công: tạo chuỗi 1/2/3
-
-Chiến lược phòng thủ: chặn chuỗi đối thủ
-
-Điểm ưu tiên theo vùng trên bảng (center control)
-
-5. Machine Learning – Decision Tree
-
-Với tập dữ liệu gồm Rank và các điểm Q1–Q9:
-
-🔹 Phần 1: Tính toán thông tin
-
-Entropy
-
-Average Entropy
-
-Information Gain
-→ Chọn thuộc tính tốt nhất cho root node
-
-🔹 Phần 2: Cây quyết định (Decision Tree – Scikit-learn)
-
-Tách dữ liệu train/test
-
-Huấn luyện mô hình độ sâu tối ưu
-
-Đánh giá bằng:
-
-Accuracy
-
-Confusion Matrix
-
-Feature Importance
-
-Trực quan hóa cây quyết định
-
-📘 Các kỹ thuật & thư viện sử dụng
-
-Python, NumPy, Pandas, Matplotlib,
-Scikit-learn, Glucose3 (SAT Solver),
-thuật toán tìm kiếm cổ điển & heuristic AI.
-
-👥 Thành viên thực hiện
-
-Lý Tuấn An – 52000620
-
-Lý Tiểu Long – 52200168
-
-Giản Hoàng Huy – 52200147
-
-Huỳnh Hoài Nam – 52200151
-
-Lê Hồng Quang – 52200156
