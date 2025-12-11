@@ -1,24 +1,9 @@
-# 📘 Introduction to Artificial Intelligence – Course Projects
+# Introduction to Artificial Intelligence – Course Projects
 
-This repository contains all assignments, implementations, and final project materials from the course **503043 – Introduction to Artificial Intelligence** at **Ton Duc Thang University**.  
+This repository contains all assignments, implementations, and final project materials from the course **Introduction to Artificial Intelligence** at **Ton Duc Thang University**.  
 The projects cover classical AI search, optimization, logic, and machine learning fundamentals.
 
----
-
-## 📌 Table of Contents
-- [Overview](#overview)  
-- [1. Search Algorithms – 8-Puzzle](#1-search-algorithms--8-puzzle)  
-- [2. Search & Heuristics – Pacman](#2-search--heuristics--pacman)  
-- [3. Local Search Algorithms](#3-local-search-algorithms)  
-- [4. N-Queens with CNFs & SAT Solver](#4-n-queens-with-cnfs--sat-solver)  
-- [5. Game AI – 8x8 Tic-Tac-Toe with Alpha-Beta Pruning](#5-game-ai--8x8-tic-tac-toe-with-alpha-beta-pruning)  
-- [6. Machine Learning – Decision Tree](#6-machine-learning--decision-tree)  
-- [Technologies Used](#technologies-used)  
-- [Team Members](#team-members)  
-
----
-
-# 🧠 Overview
+# Overview
 This course provides foundational concepts in Artificial Intelligence, including:
 
 - State-space search  
@@ -34,7 +19,7 @@ The repository includes full implementations, pseudocode, and result visualizati
 
 ---
 
-# 1. 🔍 Search Algorithms – 8-Puzzle
+# 1. Search Algorithms – 8-Puzzle
 We model the classic 8-puzzle with:
 
 ### ✔ State Representation
@@ -56,7 +41,7 @@ We model the classic 8-puzzle with:
 
 ---
 
-# 2. 🟡 Search & Heuristics – Pacman
+# 2. Search & Heuristics – Pacman
 
 We model Pacman's environment including:
 
@@ -76,7 +61,7 @@ We model Pacman's environment including:
 
 ---
 
-# 3. 🔺 Local Search Algorithms
+# 3. Local Search Algorithms
 
 We explored three classical local optimization strategies on a 2D evaluation landscape:
 
@@ -93,7 +78,7 @@ We explored three classical local optimization strategies on a 2D evaluation lan
 
 ---
 
-# 4. ♛ N-Queens with CNFs & SAT Solver
+# 4. N-Queens with CNFs & SAT Solver
 
 We solve the N-Queens problem using propositional logic:
 
@@ -109,7 +94,7 @@ We solve the N-Queens problem using propositional logic:
 
 ---
 
-# 5. 🎮 Game AI – 8x8 Tic-Tac-Toe with Alpha-Beta Pruning
+# 5. Game AI – 8x8 Tic-Tac-Toe with Alpha-Beta Pruning
 
 A competitive game implementation where the AI plays against a human.
 
@@ -127,7 +112,7 @@ A competitive game implementation where the AI plays against a human.
 
 ---
 
-# 6. 🌳 Machine Learning – Decision Tree
+# 6. Machine Learning – Decision Tree
 
 Using dataset *dt_data.csv* containing Rank + 9 scoring attributes:
 
@@ -158,7 +143,7 @@ Using Scikit-learn:
 
 ---
 
-# 👥 Team Members
+# Team Members
 | Name | Student ID | Email |
 |------|-----------|--------|
 | **Lý Tuấn An** | 52000620 | 52000620@student.tdtu.edu.vn |
